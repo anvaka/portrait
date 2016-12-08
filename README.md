@@ -10,4 +10,4 @@ And pixelated it into this with a small twist...
 
 When you zoom closer you will see quotes from Mark Twain:
 
-![mark twain twist](https://raw.githubusercontent.com/anvaka/portrait/master/docs/mark_twain_twist.gif)
+![mark twain twist](https://raw.githubusercontent.com/anvaka/portrait/master/docs/mark_twist.gif)
