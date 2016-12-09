@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "openseadragon": "^2.2.1",
+    "query-state": "^3.0.3"
+  }
+}
