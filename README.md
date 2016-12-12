@@ -19,21 +19,19 @@ Explore it live here: https://anvaka.github.io/portrait/
 You can explore the portrait the same way you would explore Google Maps. Most
 of the keyboard/mouse/touch shortcuts should be familiar:
 
-|    |    |
-|---:|:---|
-| `+`, `Mouse wheel`/`Pinch`, `Single click`, `Double tap` | Zoom in |
-| `Left arrow`  | Move left  |
-| `Right arrow`  | Move right  |
-| `Up arrow`  | Move up |
-| `Down arrow`  | Move down |
-| `Mini map click`  | Reset zoom |
+* `+`/`-`, `Mouse wheel`/`Pinch`, `Single click`, `Double tap` - Zoom in/out
+* `Left arrow` - Move left
+* `Right arrow` - Move right
+* `Up arrow` - Move up
+* `Down arrow` - Move down
+* `Mini map click` - Reset zoom
 
 ## Tidbits
 
 * The page address updates as you explore the map. So if you send link to
 someone - they will see what you see.
 * To fully zoom out - click on the mini-map portrait
-* When fully zoomed out - help text appears.
+* When fully zoomed out - help text appears
 
 
 # How does this work?
