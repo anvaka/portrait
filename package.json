@@ -2,5 +2,11 @@
   "dependencies": {
     "openseadragon": "^2.2.1",
     "query-state": "^3.0.3"
+  },
+  "scripts": {
+    "start": "browserify index.js > bundle.js",
+    "watch": "watchify --debug index.js -o bundle.js -v",
+    "server": "http-server -c-1 -p 8082",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run server\""
   }
 }

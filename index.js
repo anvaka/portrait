@@ -9,18 +9,18 @@ var qs = queryState({
 });
 
 var indexName = qs.get('index')
+var indexRoot = 'https://anvaka.github.io/portrait-data/' + indexName + '/';
 
 var viewer = window.OpenSeadragon({
   id: 'map',
   showNavigationControl: false,
+  // showNavigator: true,
   prefixUrl: '',
   preserveViewport: true,
-  tileSources: 'https://anvaka.github.io/portrait-data/' + indexName + '/index.dzi'
+  tileSources: indexRoot + 'index.dzi'
 });
 
-window.resetZoom = function() {
-  viewer.viewport.goHome();
-}
+require('./lib/navigator.js')(viewer, indexRoot + 'mini-map.jpg');
 
 var box = getBox();
 
@@ -31,7 +31,8 @@ viewer.addHandler('open', function() {
 });
 
 viewer.addHandler('viewport-change', function() {
-  var box = viewer.viewport.getBounds()
+  var viewport = viewer.viewport;
+  var box = viewport.getBounds();
   saveCurrentBox(box);
 });
 
@@ -55,4 +56,6 @@ function saveCurrentBox(box) {
     qs.set(box);
   }, saveDelay);
 }
+
+
 
