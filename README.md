@@ -38,7 +38,7 @@ someone - they will see what you see.
 
 I wrote down more than 200 Mark Twain's quotes. Mostly quotes came from
 [reddit](https://www.reddit.com/r/QuotesPorn/search?q=mark+twain&restrict_sr=on&sort=relevance&t=all)
-and [good reads](https://www.goodreads.com/author/quotes/1244.Mark_Twain).
+and [Goodreads](https://www.goodreads.com/author/quotes/1244.Mark_Twain).
 
 Then I sorted them according to their popularity (e.g. by number of votes on reddit,
 or likes on good reads), and dropped them onto canvas.
