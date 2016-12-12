@@ -1,6 +1,7 @@
 var lastRequest = 0;
 var saveDelay = 200; // Don't want to spam with history updates
 
+var help = require('./lib/help.js');
 var queryState = require('query-state');
 require('openseadragon'); // it adds itself to window.
 
@@ -33,6 +34,9 @@ viewer.addHandler('open', function() {
 viewer.addHandler('viewport-change', function() {
   var viewport = viewer.viewport;
   var box = viewport.getBounds();
+  if (viewport.getZoom() <= 1) {
+    help.show();
+  }
   saveCurrentBox(box);
 });
 

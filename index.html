@@ -5,15 +5,18 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge' >
   <meta charset="utf-8">
   <title>Portrait of Mark Twain - Quotes by Mark Twain</title>
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   <style type="text/css" media="screen">
   * {
     box-sizing: border-box;
   }
+
   body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-      background: black;
+    background: black;
+    font-family: 'Abel', sans-serif;
   }
   #map {
     position: absolute;
@@ -22,27 +25,8 @@
     height: 100%;
     width: 100%;
   }
-  .about {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    text-align: right;
-    margin: 8px 10px;
-  }
   a {
-    text-decoration: none;
-    color: white;
-    font-family: sans-serif;
-  }
-  a.reset-zoom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    color: #999;
-    font-size: 9px;
-    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
   }
   #mini-map {
     width: 75px;
@@ -61,17 +45,73 @@
     border: 1px solid red;
     display: block;
   }
+  .help {
+    padding: 0 20px;
+    color: #999;
+    position: absolute;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+  }
+
+  .hidden {
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+    opacity: 0;
+  }
+
+  .key {
+    color: #90EE90;
+  }
+  .highlight {
+    color: #90EE90;
+  }
+  h3 {
+    color: white;
+  }
+  .help.small {
+    display: none;
+  }
+  @media (max-width: 600px) {
+    .help {
+      display: none;
+    }
+    .help.small {
+      display: block;
+      width: 100%;
+    }
+  }
   </style>
 </head>
 <body>
  <div id='map'>
  </div> 
-  <div class='about'>
-    <a href='https://github.com/anvaka/portrait#portrait'>About...</a>
-  </div>
-  <!--a href='#' onclick='resetZoom()' class='reset-zoom' >Reset zoom</a-->
   <div id='mini-map'>
     <div id='display-region'></div>
+  </div>
+  <div class='help'>
+    <h3>Portrait</h3>
+    <p>
+    This is portrait of <span class='highlight'>Mark Twain</span>. It is made of his
+    quotes.
+    </p>
+    <p>
+    Navigation works like in Google Maps. To read quotes use <span class='highlight'>mouse wheel</span> or <span class='highlight'>pinch</span>
+    to zoom in.
+    </p>
+    <p>
+      <a href='https://github.com/anvaka/portrait#portrait'>Read more...</a>
+    </p>
+  </div>
+  <div class='help small'>
+    <p>
+      This is portrait of <span class='highlight'>Mark Twain</span>. It is made of his
+      quotes. <span class='highlight'>Pinch</span> to zoom in and read his quotes.
+      <a href='https://github.com/anvaka/portrait#portrait'>Read more</a> about this project...
+    </p>
   </div>
   <script src="bundle.js"></script>
 <script>
